@@ -1,8 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import {produtos} from "../../produtosCadastrados";
+import { produtos } from "../../produtosCadastrados";
 import CardProduto from "./CardProduto";
 import { useState } from "react";
+import { Autocomplete, Button, TextField } from "@mui/material";
+import { DeleteOutline } from "@mui/icons-material";
+
+const top100Films = [
+    { label: 'The Shawshank Redemption', year: 1994 },
+    { label: 'The Godfather', year: 1972 },
+    { label: 'The Godfather: Part II', year: 1974 },
+]
 
 const ProdutosContainer = styled.section`
     display: flex;
@@ -23,27 +31,48 @@ const Pesquisa = styled.div`
     display: flex;
     flex-direction: column;
 `
-function Produtos(){
+
+function teste(){
+    alert("vc apertou o botão")
+}
+
+function Produtos() {
     const [produtoFiltrados, setProdutoFiltrados] = useState(produtos);
-    return(
+    return (
         <ProdutosContainer>
             <Pesquisa>
                 <h2>Pesquise seu produto aqui</h2>
-                <input 
-                    placeholder="Digite o produto" 
+                <input
+                    placeholder="Digite o produto"
                     onChange={evento => {
-                            const produtoDigitado = evento.target.value;
-                            const resultadoFiltro = produtos.filter(
-                                produto => produto.nome.includes(produtoDigitado) 
-                            )
-                            setProdutoFiltrados(resultadoFiltro)
-                        }
+                        const produtoDigitado = evento.target.value;
+                        const resultadoFiltro = produtos.filter(
+                            produto => produto.nome.includes(produtoDigitado)
+                        )
+                        setProdutoFiltrados(resultadoFiltro)
+                    }
                     }
                 />
             </Pesquisa>
+
+            <Autocomplete
+                disablePortal
+                id="combo-box-demo"
+                options={top100Films}
+                sx={{ width: 300 }}
+                renderInput={(params) => <TextField {...params} label="Movie" />}
+            />
+
+            <Button
+                variant="contained"
+                onClick={teste}
+                startIcon = {<DeleteOutline/>}
+                color="success">success
+            </Button>
+
             <CardProdutosContainer>
                 {
-                    produtoFiltrados.map( produto =>(
+                    produtoFiltrados.map(produto => (
                         <CardProduto
                             nomeProduto={produto.nome}
                             precoProduto={produto.preco}

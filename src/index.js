@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom/client';
 import Home from './Home';
 import reportWebVitals from './reportWebVitals';
 import { createGlobalStyle } from 'styled-components';
-import { BrowserRouter, Routes,Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Cabecalho from './componentes/Cabecalho/Cabecalho';
+import { ThemeProvider } from '@emotion/react';
+import meuTheme from './theme/meuTheme';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -24,17 +26,19 @@ const GlobalStyle = createGlobalStyle`
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>    
-    <GlobalStyle/>
-    <BrowserRouter>
-      <Cabecalho/>
-      <Routes>
-        <Route path='/home' element={<Home />}/>
-        <Route path='/produto' element={<h1>Produto</h1>}/>
-        <Route path='/cadastrarproduto' element={<h1>Cadastrar</h1>}/>
-      </Routes>
-    </BrowserRouter>
-    
+  <React.StrictMode>
+    <GlobalStyle />
+    <ThemeProvider theme={meuTheme  }>
+      <BrowserRouter>
+        <Cabecalho />
+        <Routes>
+          <Route path='/home' element={<Home />} />
+          <Route path='/produto' element={<h1>Produto</h1>} />
+          <Route path='/cadastrarproduto' element={<h1>Cadastrar</h1>} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
+
   </React.StrictMode>
 );
 
