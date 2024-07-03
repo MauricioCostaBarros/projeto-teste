@@ -25,7 +25,7 @@ const CardProdutosContainer = styled.div`
     display: flex;
     width: 100%;
     justify-content: center;
-    gap:20px;
+    gap: 20px;
 `
 const Pesquisa = styled.div`
     display: flex;
@@ -78,7 +78,7 @@ function Produtos() {
                             precoProduto={produto.preco}
                             descricaoProduto={produto.descricao}
                             imgProduto={produto.img}
-                            corNomeProduto={"white"}
+                            corNomeProduto={"black"}
                         />
                     ))
                 }

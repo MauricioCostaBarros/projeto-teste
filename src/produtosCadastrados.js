@@ -1,7 +1,13 @@
-import src from "./imagens/logoSenai.png"
+import KYAN from "./imagens/kyan.webp"
+import placaMãe from "./imagens/placaMãe.webp"
+import mouseGamer from "./imagens/mouseGamer.jpg"
+import tecladoGamer from "./imagens/tecladoGamer.jpg"
+
 
 export const produtos = [
-    {nome:"TI",preco:10, descricao:" asd asdgvsa asgdv", img:src},
-    {nome:"Eletrônica",preco:20, descricao:" asd fgjkhjv", img:src},
-    {nome:"Mecânica",preco:30, descricao:" fghgfh gdv", img:src},
+    {nome:"KYAN",preco:"R$ 1.000.000,00", descricao:"KYAN", img:KYAN},
+    {nome:"PLACA MÃE",preco: "R$ 359,90", descricao:"Placa mãe ASUS Prime", img:placaMãe},
+    {nome:"MOUSE GAMER",preco:"R$ 89,90", descricao:"Mouse Branco Gamer", img:mouseGamer},
+    {nome:"TECLADO GAMER",preco:"R$ 99,90", descricao:"Teclado Gamer", img:tecladoGamer},
+    {nome:"Mecânica",preco:30, descricao:" fghgfh gdv", img:KYAN},
 ];

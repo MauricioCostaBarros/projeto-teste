@@ -1,16 +1,17 @@
 import React from "react";
-import imgLogo from "../../imagens/logoSenai.png";
+import imgLogo from "../../imagens/logoSenai.jpg";
 import styled from "styled-components";
 
 const LogoContainer = styled.div`
-    width: 10%;
+    width: 9%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 20px;
+    margin-left: 2px;
     #imgLogo{
         width: 100%;
+        border: 2px solid black;
     }
     #textoLogo{
         margin: 0;
@@ -23,7 +24,7 @@ function Logo(){
     return(
         <LogoContainer>
                 <img id="imgLogo" src={imgLogo} alt=""/>
-                <h4 id="textoLogo">"Anchieta"</h4>
+                <h4 id="textoLogo"></h4>
         </LogoContainer>
     );
 }

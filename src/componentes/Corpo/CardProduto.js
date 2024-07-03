@@ -6,8 +6,8 @@ const CardProdutoContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 300px;
-    width: 250px;
+    height: 400px;
+    width: 20%;
     background-color: gray;
     box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
     border-radius: 10px;    
@@ -22,21 +22,22 @@ const DescricaoProduto = styled.p`
 
 `
 const ImgProduto = styled.img`
-    width: 90%;
+    width: 95%;
+    height: 200px;
 `
 function CardProduto({
-                        nomeProduto,
-                        precoProduto,
-                        descricaoProduto,
-                        imgProduto,
-                        corNomeProduto
-                    }){
-    return(
+    nomeProduto,
+    precoProduto,
+    descricaoProduto,
+    imgProduto,
+    corNomeProduto
+}) {
+    return (
         <CardProdutoContainer>
-            <ImgProduto src= {imgProduto}/>
-            <NomeProduto corNomeProduto = {corNomeProduto}>{nomeProduto}</NomeProduto>
+            <ImgProduto src={imgProduto} />
+            <NomeProduto corNomeProduto={corNomeProduto}>{nomeProduto}</NomeProduto>
             <PrecoProduto>{precoProduto}</PrecoProduto>
-            <DescricaoProduto>{descricaoProduto}</DescricaoProduto>                   
+            <DescricaoProduto>{descricaoProduto}</DescricaoProduto>
         </CardProdutoContainer>
     );
 }
