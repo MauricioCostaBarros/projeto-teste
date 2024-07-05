@@ -9,12 +9,12 @@ const CabecalhoContainer = styled.header`
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-    background-color: gray;
-    border-bottom: 3px solid black;
+    background-color: #808080;
+    border-bottom: 3px solid #A9A9A9;
 `
 function Cabecalho(){
     return(
-        <CabecalhoContainer>           
+        <CabecalhoContainer>    
             <Logo/>
             <Menu/>
             <Icones/>

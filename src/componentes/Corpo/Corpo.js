@@ -3,11 +3,13 @@ import styled from "styled-components";
 import Produtos from "./Produtos";
 
 const CorpoContainer = styled.main`
-    background-color: #6495ED;
+    background-color: #778899;
     height: 90vh;
     display: flex;
     justify-content: center;
 `
+
+
 function Corpo(){
     return(
         <CorpoContainer>

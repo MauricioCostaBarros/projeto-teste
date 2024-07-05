@@ -8,10 +8,8 @@ const LogoContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 2px;
     #imgLogo{
         width: 100%;
-        border: 2px solid black;
     }
     #textoLogo{
         margin: 0;

@@ -9,5 +9,6 @@ export const produtos = [
     {nome:"PLACA MÃE",preco: "R$ 359,90", descricao:"Placa mãe ASUS Prime", img:placaMãe},
     {nome:"MOUSE GAMER",preco:"R$ 89,90", descricao:"Mouse Branco Gamer", img:mouseGamer},
     {nome:"TECLADO GAMER",preco:"R$ 99,90", descricao:"Teclado Gamer", img:tecladoGamer},
-    {nome:"Mecânica",preco:30, descricao:" fghgfh gdv", img:KYAN},
+    {nome:"KYAN",preco:"R$ 1.000.000,00", descricao:"KYAN", img:KYAN},
+    {nome:"MECÂNICA",preco:30, descricao:" fghgfh gdv", img:KYAN},
 ];

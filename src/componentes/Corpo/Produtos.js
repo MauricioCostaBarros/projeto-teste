@@ -32,16 +32,11 @@ const Pesquisa = styled.div`
     flex-direction: column;
 `
 
-function teste(){
-    alert("vc apertou o botão")
-}
-
 function Produtos() {
     const [produtoFiltrados, setProdutoFiltrados] = useState(produtos);
     return (
         <ProdutosContainer>
             <Pesquisa>
-                <h2>Pesquise seu produto aqui</h2>
                 <input
                     placeholder="Digite o produto"
                     onChange={evento => {
@@ -62,13 +57,6 @@ function Produtos() {
                 sx={{ width: 300 }}
                 renderInput={(params) => <TextField {...params} label="Movie" />}
             />
-
-            <Button
-                variant="contained"
-                onClick={teste}
-                startIcon = {<DeleteOutline/>}
-                color="success">success
-            </Button>
 
             <CardProdutosContainer>
                 {
