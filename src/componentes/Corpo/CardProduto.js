@@ -6,7 +6,7 @@ const CardProdutoContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 350px;
+    height: 330px;
     width: 15%;
     background-color: gray;
     box-shadow: 0px 4px 4px rgba(0,0,0,0.50);
@@ -24,7 +24,7 @@ const DescricaoProduto = styled.p`
 `
 const ImgProduto = styled.img`
     width: 95%;
-    height: 160px;
+    height: 150px;
     border-radius: 15px;
     border: 2px solid #A9A9A9;
 `

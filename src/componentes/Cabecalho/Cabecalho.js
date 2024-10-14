@@ -10,7 +10,7 @@ const CabecalhoContainer = styled.header`
     align-items: center;
     height: 10vh;
     background-color: #808080;
-    border-bottom: 3px solid #A9A9A9;
+    border-bottom: 2px solid #A9A9A9;
 `
 function Cabecalho(){
     return(

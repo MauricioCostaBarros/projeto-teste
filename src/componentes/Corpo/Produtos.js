@@ -5,9 +5,11 @@ import CardProduto from "./CardProduto";
 import { useState } from "react";
 import { Autocomplete, Button, TextField } from "@mui/material";
 import { DeleteOutline } from "@mui/icons-material";
+import produtosCadastrados from "../../produtosCadastrados";
 
-const top100Films = [
-    { label: 'The Shawshank Redemption', year: 1994 },
+
+const optionsProdutos = [
+    { label: 'The Godfather', year: 1970},
     { label: 'The Godfather', year: 1972 },
     { label: 'The Godfather: Part II', year: 1974 },
 ]
@@ -26,6 +28,7 @@ const CardProdutosContainer = styled.div`
     width: 100%;
     justify-content: center;
     gap: 20px;
+    font-size: 10px;
 `
 const Pesquisa = styled.div`
     display: flex;
@@ -53,9 +56,9 @@ function Produtos() {
             <Autocomplete
                 disablePortal
                 id="combo-box-demo"
-                options={top100Films}
+                options={optionsProdutos}
                 sx={{ width: 300 }}
-                renderInput={(params) => <TextField {...params} label="Movie" />}
+                renderInput={(params) => <TextField {...params} label="escolha" />}
             />
 
             <CardProdutosContainer>
